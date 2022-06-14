@@ -44,10 +44,11 @@ public class RPS {
     }
     public static void playGame(int rounds){
         Scanner in = new Scanner(System.in);
-        int userChoice,computerChoice, diff;
+        int computerChoice, diff,userChoice;
         int wins = 0;
         int ties = 0;
-        ArrayList<String> options = new ArrayList<String>();
+        String userChoiceStr;
+        ArrayList<String> options = new ArrayList<>();
         options.add("Secret 0th option");
         options.add("Paper");
         options.add("Scissors");
@@ -56,13 +57,20 @@ public class RPS {
 
         for(int i = 1; i <= rounds; i++){
             System.out.println("Make your choice Rock (3), Scissors (2), or Paper (1)");
+            userChoiceStr = in.next();
 
             while(true){
-                userChoice = in.nextInt(); // check user has input the correct data type / range of values
-                if(userChoice <4 && userChoice >0){
-                    break;
+                try{
+                    userChoice = Integer.parseInt(userChoiceStr);
+                    if(userChoice <4 && userChoice >0){
+                        break;
+                    } else{
+                        throw new Exception();
+                    }
+                } catch(Exception e){
+                    System.out.println("That's not a valid number, please try again");
+                    userChoiceStr = in.next();
                 }
-                System.out.println("That isn't an option, please try again");
             }
 
 
