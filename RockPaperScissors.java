@@ -1,13 +1,11 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-
-
-public class RPS {
+public class RockPaperScissors {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
 
-        while(true) {
+        while(true) { //main loop
             System.out.println("=======================================================");
             System.out.println("Welcome to my Rock-Paper-Scissors console application!!");
             System.out.println("=======================================================\n");
