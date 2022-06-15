@@ -45,7 +45,7 @@ public class RockPaperScissors {
         int wins = 0;
         int ties = 0;
         String userChoiceStr;
-        ArrayList<String> options = new ArrayList<>();
+        ArrayList<String> options = new ArrayList<>(); // List used to easily display the correct word to user while using numbers in the code
         options.add("Secret 0th option");
         options.add("Paper");
         options.add("Scissors");
@@ -56,10 +56,10 @@ public class RockPaperScissors {
             System.out.println("Make your choice Rock (3), Scissors (2), or Paper (1)");
             userChoiceStr = in.next();
 
-            while(true){
+            while(true){ // Checking user inputs a valid integer
                 try{
                     userChoice = Integer.parseInt(userChoiceStr);
-                    if(userChoice <4 && userChoice >0){
+                    if(userChoice <4 && userChoice >0){ // Checking user input is either 1,2,3
                         break;
                     } else{
                         throw new Exception();

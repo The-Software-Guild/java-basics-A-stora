@@ -8,7 +8,7 @@ public class HealthyHearts {
 
         String age = input.next();
 
-        while(true){
+        while(true){ // Check user input is a valid integer using parsing
             try {
                 Integer.parseInt(age);
                 break;
@@ -17,7 +17,7 @@ public class HealthyHearts {
                 age = input.next();
             }
         }
-        int ageInt = Integer.parseInt(age);
+        int ageInt = Integer.parseInt(age); // Calculations
         int maxRate = 220 - ageInt;
         int rangeLow = (int)(Math.round(maxRate*0.5));
         int rangeHigh = (int)(Math.round(maxRate*0.85));

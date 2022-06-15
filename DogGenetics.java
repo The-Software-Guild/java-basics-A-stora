@@ -10,7 +10,7 @@ public class DogGenetics {
         System.out.println(name+" is:\n");
 
         double total;
-        double b1 = Math.random();
+        double b1 = Math.random(); // Generate 5 random numbers
         double b2 = Math.random();
         double b3 = Math.random();
         double b4 = Math.random();
@@ -18,11 +18,11 @@ public class DogGenetics {
 
         total = b1+b2+b3+b4+b5;
         b1 = Math.round((b1/total*100));
-        b2 = Math.round((b2/total*100));
-        b3 = Math.round((b3/total*100));
+        b2 = Math.round((b2/total*100)); // Round them as they need to be whole numbers
+        b3 = Math.round((b3/total*100)); // Results may not be perfectly random
         b4 = Math.round((b4/total*100));
         total = b1+b2+b3+b4;
-        b5 = 100 - total;
+        b5 = 100 - total; // 5th value gets corrected based on rounding errors to sum to 100%
         total = b1+b2+b3+b4+b5;
 
 
